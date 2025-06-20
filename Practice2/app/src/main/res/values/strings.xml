@@ -4,4 +4,6 @@
     <string name="button1">Кнопка 1</string>
     <string name="button2">Кнопка 2</string>
     <string name="button3">Кнопка 3</string>
+    <string name="button_transition_page">Переход на другую страницу</string>
+    <string name="button_transition_main">Переход на главную страницу</string>
 </resources>

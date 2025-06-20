@@ -6,4 +6,5 @@
     <color name="text">#001C57</color>
     <color name="button2">#981FB8</color>
     <color name="stroke">#DABBE9</color>
+    <color name="button_transition_page">#CE8DEF</color>
 </resources>

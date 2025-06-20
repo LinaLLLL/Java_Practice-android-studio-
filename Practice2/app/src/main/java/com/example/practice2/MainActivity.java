@@ -4,6 +4,7 @@ import static android.app.ProgressDialog.show;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         });
         TextView text = findViewById(R.id.text);
         button2 = findViewById(R.id.button2);
+        Button button_transitin_page = findViewById(R.id.button_transition_page);
+
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
     public void btnClick(View v){
@@ -75,5 +80,10 @@ public class MainActivity extends AppCompatActivity {
         btn.setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
         Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
 
+    }
+    //метод для перехода на вторую страницу
+    public void startNewActivity(View v){
+        Intent intent = new Intent(this, Activity2.class);
+        startActivity(intent);
     }
 }
