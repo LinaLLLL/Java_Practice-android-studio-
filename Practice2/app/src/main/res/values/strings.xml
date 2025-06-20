@@ -4,7 +4,14 @@
     <string name="button1">Кнопка 1</string>
     <string name="button2">Кнопка 2</string>
     <string name="button3">Кнопка 3</string>
-    <string name="button_transition_page">Переход на другую страницу</string>
+    <string name="button_transition_page">Переход на вторую страницу</string>
+    <string name="button_transition_page_third">Переход на третью страницу</string>
     <string name="button_transition_main">Переход на главную страницу</string>
     <string name="error_download_image">Ошика загрузки</string>
+    <string name="button_fragment1">Фрагмент 1</string>
+    <string name="button_fragment2">Фрагмент 2</string>
+    <string name="switch_text">Нажми на меня</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

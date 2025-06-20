@@ -12,13 +12,12 @@
         android:id="@+id/text"
         android:layout_width="65dp"
         android:layout_height="57dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="monospace"
         android:text="@string/logo"
         android:textColor="@color/text"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,16 +25,31 @@
         android:id="@+id/button_transition_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:backgroundTint="@color/button_transition_page"
         android:onClick="startNewActivity"
         android:text="@string/button_transition_page"
         android:textColor="@color/text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text" />
+
+    <Button
+        android:id="@+id/button_transition_page2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/button_transition_page"
+        android:onClick="trasitionThirdActivity"
+        android:text="@string/button_transition_page_third"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_transition_page" />
 
     <LinearLayout
         android:id="@+id/linearLayout"

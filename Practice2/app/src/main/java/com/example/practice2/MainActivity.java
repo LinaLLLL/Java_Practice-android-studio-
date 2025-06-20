@@ -122,5 +122,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void trasitionThirdActivity(View v){
+        Intent intent = new Intent(this, Activity3.class);
+        startActivity(intent);
+    }
+
 
 }
