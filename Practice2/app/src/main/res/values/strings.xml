@@ -6,4 +6,5 @@
     <string name="button3">Кнопка 3</string>
     <string name="button_transition_page">Переход на другую страницу</string>
     <string name="button_transition_main">Переход на главную страницу</string>
+    <string name="error_download_image">Ошика загрузки</string>
 </resources>
