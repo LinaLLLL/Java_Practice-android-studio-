@@ -7,9 +7,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.MediaParser;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,17 +38,49 @@ public class MainActivity extends AppCompatActivity {
         });
         TextView text = findViewById(R.id.text);
         button2 = findViewById(R.id.button2);
-        Button button_transitin_page = findViewById(R.id.button_transition_page);
+
+        ImageButton button_image_car = findViewById(R.id.button_image_car);
+        ImageButton button_image_police = findViewById(R.id.button_image_police);
+
+        MediaPlayer carSound = MediaPlayer.create(this, R.raw.car);
+        MediaPlayer policeSound = MediaPlayer.create(this, R.raw.police);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showInfo(text.getText().toString(), button2);
                 ShowInfoAllert("Вы хотите закрыть приложения?");
-
             }
         });
 
+        button_image_car.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                soundPlayButton(carSound, policeSound);
+            }
+        });
+
+        button_image_police.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                soundPlayButton(policeSound, carSound);
+            }
+        });
+    }
+
+    private void soundPlayButton(MediaPlayer sound1, MediaPlayer sound2) {
+        if(sound1.isPlaying()){ //проверка играет ли мелодия
+            sound1.pause(); //пауза
+            sound1.seekTo(0); //установка на начало мелодии(из-за паузы, что бы не начиналось с того места где остановаилась)
+            sound1.setLooping(false); //зацикленность false
+        }
+        if (sound2.isPlaying()){
+            sound2.pause();
+            sound2.seekTo(0);
+            sound2.setLooping(false);
+        }
+        sound1.start();
+        sound1.setLooping(true);
 
     }
 
@@ -86,4 +121,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Activity2.class);
         startActivity(intent);
     }
+
+
 }

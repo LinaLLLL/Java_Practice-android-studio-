@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/BG" />
+        app:srcCompat="@drawable/bg" />
 
     <Button
         android:id="@+id/button_transition_main"
